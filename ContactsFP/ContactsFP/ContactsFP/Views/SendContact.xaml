@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ContactsFP.Views.SendContact"
+             Title="  Enviar" Icon="settings.png">
+
+  <ContentPage.Content>
+    <StackLayout Padding="20,20,20,20">
+      <Label Text="Consolidar los contactos" FontAttributes="Bold" FontSize="Large" HorizontalOptions="Center" VerticalOptions="Center" TextColor="#77d065" />
+      <Frame>
+        <StackLayout>
+          <Button Text="Enviar" TextColor="White"  BackgroundColor="Gray" HorizontalOptions="Fill" VerticalOptions="Center" Command="{Binding SendCommand}" />
+        </StackLayout>
+      </Frame>
+    </StackLayout>
+  </ContentPage.Content>
+  
+</ContentPage>

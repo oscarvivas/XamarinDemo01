@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ContactsFP.Views.AddContact"
+             Title="  Agregar" 
+             Icon="today.png">
+
+  <ContentPage.Content>
+      <StackLayout Padding="20,20,20,20">
+        <Label Text="Agregar Nuevo Contacto" FontAttributes="Bold" FontSize="Large" HorizontalOptions="Center" TextColor="#77d065" />
+        <Frame>
+        <ScrollView VerticalOptions="StartAndExpand">
+          <StackLayout>
+            <Label Text="Todos los campos son obligatorios" />
+            <Image Source="{Binding ImageSource}" VerticalOptions="CenterAndExpand" />
+            <Button Text="Tomar una foto" Command="{Binding TakePictureCommand}"></Button>
+            <Button Text="Seleccionar una foto de la galeria" Command="{Binding SelectPictureCommand}"></Button>
+            <Entry Text="{Binding Name}" Placeholder="Nombre" />
+            <Entry Text="{Binding LastName}" Placeholder="Apellido" />
+            <Entry Text="{Binding Company}" Placeholder="Nombre de la Compañia" />
+            <Entry Text="{Binding Email}" Placeholder="E-mail" Keyboard="Email" />
+            <Entry Text="{Binding Phone}" Placeholder="Número de teléfono" Keyboard="Telephone" />
+            <Button Text="Consultar Ubicación" Command="{Binding GetPositionCommand}"></Button>
+            <Entry Text="{Binding PositionStatus}" Placeholder="Estado" IsEnabled="false" ></Entry>
+            <Entry Text="{Binding PositionLatitude}" Placeholder="Latitud" IsEnabled="false" ></Entry>
+            <Entry Text="{Binding PositionLongitude}" Placeholder="Longitud" IsEnabled="false" ></Entry>
+            <Button Text="Crear Contacto" TextColor="White" Command="{Binding AddCommand}" BackgroundColor="Gray" HorizontalOptions="Fill" VerticalOptions="Center" />
+          </StackLayout>
+        </ScrollView>
+        </Frame>
+      </StackLayout>
+  </ContentPage.Content>
+  
+</ContentPage>
